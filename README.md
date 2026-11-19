@@ -37,7 +37,7 @@ Requisitos: Docker Desktop en modo Linux y Docker Compose. Desde PowerShell, en 
 
 El script genera `.env` local con claves aleatorias, inicializa SQL Server y levanta la API en <http://localhost:5164/swagger>. `.env` está excluido de Git. `appsettings.json` contiene emisor, audiencia y duración del token; `Jwt__Clave` se configura fuera del repositorio. En ejecución local con `./scripts/Start-Local.ps1`, se crea una clave aleatoria para esa sesión si no existe una variable `Jwt__Clave`.
 
-La tabla de usuarios se agrega mediante `database/Usuarios.sql`, ejecutado por el inicializador incluso cuando ya existe la base S13. También se puede ejecutar ese script manualmente contra `VeterinariaS13DB`.
+La solución usa `VeterinariaS14DB`, una base independiente para no modificar la base de la semana 13. El inicializador ejecuta `database/Veterinaria.sql` y `database/Usuarios.sql`; ambos scripts son idempotentes y pueden volver a ejecutarse sin borrar datos.
 
 ## Pruebas
 

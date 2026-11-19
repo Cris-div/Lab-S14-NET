@@ -56,7 +56,7 @@ var app = builder.Build();
 // Valida los seis mapas antes de atender solicitudes.
 app.Services.GetRequiredService<IMapper>().ConfigurationProvider.AssertConfigurationIsValid();
 app.MapOpenApi();
-app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Veterinaria S13 v1"));
+app.UseSwaggerUI(options => options.SwaggerEndpoint("/openapi/v1.json", "Veterinaria S14 v1"));
 if (builder.Configuration.GetValue<bool>("UsarHttps")) app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

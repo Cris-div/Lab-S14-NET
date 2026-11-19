@@ -40,7 +40,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       Jwt__Clave: ${JWT_SECRET:?Ejecuta scripts/Start-Docker.ps1 o configura .env}
-      ConnectionStrings__Veterinaria: "Server=db;Database=VeterinariaS13DB;User Id=sa;Password=${MSSQL_SA_PASSWORD:?Ejecuta scripts/Start-Docker.ps1 o configura .env};Encrypt=True;TrustServerCertificate=True"
+      ConnectionStrings__Veterinaria: "Server=db;Database=VeterinariaS14DB;User Id=sa;Password=${MSSQL_SA_PASSWORD:?Ejecuta scripts/Start-Docker.ps1 o configura .env};Encrypt=True;TrustServerCertificate=True"
     ports:
       - "127.0.0.1:${API_PORT:-5164}:8080"
     depends_on:

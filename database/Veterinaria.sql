@@ -1,9 +1,9 @@
 -- SQL Server. Base independiente del laboratorio S12. No elimina bases existentes.
 USE master;
 GO
-IF DB_ID(N'VeterinariaS13DB') IS NULL CREATE DATABASE VeterinariaS13DB;
+IF DB_ID(N'VeterinariaS14DB') IS NULL CREATE DATABASE VeterinariaS14DB;
 GO
-USE VeterinariaS13DB;
+USE VeterinariaS14DB;
 GO
 SET XACT_ABORT ON;
 BEGIN TRANSACTION;
